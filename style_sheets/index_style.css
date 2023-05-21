@@ -1,0 +1,17 @@
+/* Extension Style Sheet For Home Page */
+.intro{
+    text-align: center;
+    font-size: calc(90vw/15);
+    margin: 5vw;
+    font-family: 'Abel', cursive;
+    padding-top: 30vh;
+    padding-bottom: 40vh
+}
+.logo{
+    margin: 2vw;
+    width: 20vw;
+}
+.home_logo{
+    text-align: center;
+    max-width: 80vw;
+}

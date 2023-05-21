@@ -1,0 +1,55 @@
+/* Extension Style Sheet For Python Projects Page */
+main{font-family: Heebo, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, cursive;}
+h1{
+    border-radius: 5mm;
+    margin: 1cm;
+    padding: 5mm;
+    text-align: center;
+    border: black solid 1mm;
+    min-width: 4cm;
+}
+h2{
+    text-align: center;
+    text-transform: capitalize;
+    margin: 3mm;
+}
+#separator3{margin: 2mm 0;}
+.note{max-width: 10cm;}
+.short_note{
+    max-width: 10cm;
+    margin: 5mm;
+    padding: 5mm;
+}
+.main_flex{
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5mm;
+    max-width: 20cm;
+}
+.constituent_flex{
+    border: solid black 1mm;
+    border-radius: 5mm;
+    text-align: center;
+    flex-wrap: wrap;
+    align-self: center;
+    margin: 1cm 5mm;
+}
+#interpreter{color: black;}
+.flex_head{margin: 2mm;}
+.flex_para{margin: 2mm;}
+.flex_file_para{
+    margin: 5mm;
+    text-align: center;
+    display: inline-block;
+}
+.downloader{
+    margin: 5mm;
+    text-align: center;
+    display: inline-block;
+}
+#file_1, #file_2,#file_2_1, #file_3, #file_4, #file_5, #file_5_1, #file_5_2, #file_6, #file_7_1, #file_7_2, #file_7_3{
+    color: black;
+    text-decoration: none;
+}
+#contact_mail{color: black;}
