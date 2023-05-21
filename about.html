@@ -1,0 +1,82 @@
+<!-- About Page -->
+<!DOCTYPE html:5>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Webpage hosted on github for github account U-010000100">
+    <meta name="keywords" content="github U-010000100">
+    <link rel="stylesheet" href="style_sheets/main_style.css">
+    <link rel="stylesheet" href="style_sheets/about_style.css">
+    <script src="scripts/main_script.js"></script>
+    <script src="scripts/about_script.js"></script>
+    <link rel="shortcut icon" href="images/page_icon.png" type="image/x-icon">
+    <title>U-010000100 on GitHub</title>
+</head>
+<body id="body">
+    <header id="header">
+        <img src="images/profile_photo.jfif" alt="profile_photo" id="dp_header">
+        <nav style="display: inline;">
+            <ul style="display: inline-block;">
+                <li><a href="index.html" id="link1" onmouseover=hover_color_changer_1() onmouseleave=hover_color_remover_1()>Home</a></li>
+                <li><a href="about.html" id="link2" onmouseover=hover_color_changer_2() onmouseleave=hover_color_remover_2()>About Me</a></li>
+                <li><a href="py_projects.html" id="link3" onmouseover=hover_color_changer_3() onmouseleave=hover_color_remover_3()>Python Projects</a></li>
+                <li><a href="https://github.com/U-010000100" id="link4" onmouseover=hover_color_changer_4() onmouseleave=hover_color_remover_4()>Github Profile</a></li>
+                <li><a href="https://hacker4522.w3spaces.com" id="link5" onmouseover=hover_color_changer_5() onmouseleave=hover_color_remover_5()>W3Schools Space</a></li>
+            </ul>
+        </nav>
+        <button onclick=theme_changer() onmouseover=theme_color_changer() onmouseleave=theme_color_remover() id="themechanger">Light Theme</button>
+        <div id="separator1"><hr width="auto" size="2" color="black"></div>
+    </header>
+    <main>
+        <div id="about" class="about">
+            <img src="images/profile_photo.jfif" alt="profile_photo" id="dp_about">
+            <div class="description">
+                <h1 class="about_username" id="about_username">U-010000100</h1>
+                <h2>Hi</h2><h3>What's Up Guys</h3><p>@U-010000100 is my username on github. This site is one of my projects. I am a Programmer or a Coder, depends upon you what you wanna say.
+                Studying in 11<sup>th</sup> standard, I am developing programming skills, one example is the website you are currently watching, other is the W3Schools Space Site (which is simpler) and some python projects.
+                <div id="separator3"><hr width="auto" color="black" size="1"></div>
+                I am not so good in coding because I am learning, trying my best. If you want help from me (like this WebPage for unofficial use), or wanna suggest or tell me something, you can contact me.<br>
+                <a href="mailto:hack518@duck.com" id="contact_mail" onmouseover=mail_color_changer() onmouseleave=mail_color_remover()>Direct Mail</a> or Mail To : Hack518@duck.com</p>
+            </div>
+        </div>
+        <h2 id="logo_desc">here are the languages i have knowledge in</h2>
+        <div align="center">
+            <div class="home_logo">
+                <div class="logo_container"><img src="images/HTML.png" alt="html_logo" class="logo"><br><p id="logo_desc_1"><b>HTML</b></p></div>
+                <div class="logo_container"><img src="images/CSS.png" alt="css_logo" class="logo"><br><p id="logo_desc_2"><b>CSS</b></p></div>
+                <div class="logo_container"><img src="images/JS.png" alt="js_logo" class="logo"><br><p id="logo_desc_3"><b>JS</b></p></div>
+                <div class="logo_container"><img src="images/Python.png" alt="py_logo" class="logo"><br><p id="logo_desc_4"><b>Python</b></p></div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <div id="separator2"><hr width="auto" size="2" color="black"></div>
+        <div class="copyright">Copyright &copy; U-010000100 @ Github</div>
+    </footer>
+</body>
+</html>
+<style>
+    .about{
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+</style>
+<script>
+    function theme_changer_extension(theme) {
+        if (theme==="dark") {
+            document.getElementById("body").style.backgroundColor = "black"
+            document.getElementById("body").style.color = "white"
+            document.getElementById("dp_about").style.borderColor = "white"
+        } else {
+            document.getElementById("body").style.backgroundColor = "white"
+            document.getElementById("body").style.color = "black"
+            document.getElementById("dp_about").style.borderColor = "black"
+        }
+        t_c_e_extender(theme)
+    }
+</script>
