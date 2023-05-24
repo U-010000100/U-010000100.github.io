@@ -137,6 +137,7 @@ def game():
                 user_guess = int(user_guess)
             except Exception:
                 print("Please type only number.")
+                delay.two_second_delay()
                 print(blank)
                 continue
             else:
@@ -161,10 +162,12 @@ def game():
                 print("Repair the code.")
                 exit()
         cwd = os.getcwd()
-        os.mkdir(f"{cwd}/TGP_scores")
-        path_1 = f"{cwd}/Easy_score.txt"
-        path_2 = f"{cwd}/Medium_score.txt"
-        path_3 = f"{cwd}/Hard_score.txt"
+        try: os.mkdir(f"{cwd}/TPG_scores")
+        except FileExistsError: pass
+        else: pass
+        path_1 = f"{cwd}/TPG_scores/Easy_score.txt"
+        path_2 = f"{cwd}/TPG_scores/Medium_score.txt"
+        path_3 = f"{cwd}/TPG_scores/Hard_score.txt"
         if hardness=='easy':
             try:
                 with open(path_1, "r") as file:
