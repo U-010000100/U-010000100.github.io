@@ -1,4 +1,4 @@
-# Encrypted Message Generator
+# Encrypted Message Generator ( Protection String : encrypted message generator )
 import time
 import random
 import os
@@ -35,7 +35,7 @@ def static_cipher_generator() -> list:
     cipher_code_temp = []
     global restart_status
     cipher_index = 0
-    help_message = "This is a numeric Cipher, so you have to enter just numbers (Max Digits : 10)\nTpe 'help' to display this message"
+    help_message = "This is a numeric Cipher, so you have to enter just numbers (Max Digits : 10)\nType 'help' to display this message"
     print(blank); print(help_message)
     while cipher_index<10:
         if restart_status==True: break
@@ -70,7 +70,7 @@ def random_cipher_generator() -> list:
     time.sleep(1)
     code_index = 0
     while code_index<10:
-        cipher = random.randint(-1000, 1000)
+        cipher = random.randint(-10000, 10000)
         cipher_code.append(cipher)
         code_index+=1
     print("Done."); time.sleep(0.5)
@@ -95,12 +95,13 @@ decrypter = """decrypted_message = []
 for character in range(len(message)):
     index = character % 10
 """
-file_deleter = """self_destruction_status = False\ncwd = os.getcwd()\nfolders_and_files = os.listdir(cwd)\nfiles = []\nfor index in range(len(folders_and_files)):\n        name = folders_and_files[index]
-        if ".py" in name: files.append(name)\n        else: pass\nif "Message.py" in files: os.remove(cwd+"\\\\Message.py"); self_destruction_status = True;  print("File Self Destructed.")\nelse:\n    for index in range(len(files)):
-        file_name = cwd+"\\\\"+files[index]\n        with open(file_name, "r") as file:comment = file.read()\n        if "# Encrypted Message Decrypter".lower() in comment.lower():\n            if "# Encrypted Message Generator" in comment: pass\n            else: os.remove(file_name); self_destruction_status = True
-        elif "(message[character]+(cipher_code[index]))" in comment:\n            if "# Encrypted Message Generator" in comment: pass\n            else:  os.remove(file_name); self_destruction_status = True\n        else: pass
-    else:\n        if self_destruction_status==False: print("Self Destruction Failed.")\n        else: print("File Self Destructed.")\ntime.sleep(1)
+file_deleter = """self_destruction_status = False\ndestructor = True\ncwd = os.getcwd()\nfolders_and_files = os.listdir(cwd)\nfiles = []\nfor index in range(len(folders_and_files)):\n        name = folders_and_files[index]
+        if ".py" in name: files.append(name)\n        else: pass\nif "Message.py" in files: os.remove(cwd+"\\\\Message.py"); self_destruction_status = "File Self Destructed."\nelse:\n    for index in range(len(files)):
+        file_name = cwd+"\\\\"+files[index]\n        with open(file_name, "r") as file:comment = file.read()\n        if "# Encrypted Message Decrypter".lower() in comment.lower():\n            if "Encrypted Message Generator".lower() in comment: pass\n            else: os.remove(file_name); self_destruction_status = True
+        elif "(message[character]+(cipher_code[index]))".lower() in comment:\n            if "Encrypted Message Generator" in comment: pass\n            else:  os.remove(file_name); self_destruction_status = True\n        else: pass
+    else:\n        if self_destruction_status==False: self_destruction_status = "Self Destruction Failed."\n        else: self_destruction_status = "File Self Destructed."
 """
+destruction_status_printer = """def destruction_status():\n    print(self_destruction_status)\n    time.sleep(1)\nif destructor==True: destruction_status()\nelse: pass"""
 def reverse_cipher_code_generator(cipher_code_suite: list) -> str:
     index = 0
     reverse_cipher_suite = []
@@ -111,6 +112,7 @@ def reverse_cipher_code_generator(cipher_code_suite: list) -> str:
 while 1==1:
     exit_status = False
     restart_status = False
+    message = []; encrypted_message = []; cipher_code = []
     print(blank)
     print(welcome_message)
     print("Welcome To Encrypted Message Generator.")
@@ -210,8 +212,10 @@ while 1==1:
         decrypted_message_convertor = "for index in range(len(decrypted_message)):\n    message_list.append(character_set[decrypted_message[index]])\n"; file.write(decrypted_message_convertor)
         message_string_maker = 'message_string = "".join(message_list)\n'; file.write(message_string_maker)
         if self_deletion==True: file.write(file_deleter)
-        else: pass
-        viewer_and_timer = f"print(message_string); time.sleep({time_value})\n"; file.write(viewer_and_timer)
+        else: file.write("destructor = False\nself_destruction_status = None\n")
+        file.write("print(message_string); ")
+        view_timer = f"time.sleep({time_value})\n"; file.write(view_timer)
+        file.write(destruction_status_printer)
     print("Finishing File..."); time.sleep(1); print("Done!"); time.sleep(1)
     while True:
         print("Want to restart application ?")
