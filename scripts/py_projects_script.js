@@ -1,6 +1,6 @@
 // Extension Script For Python Prohects Page
 function t_c_e_extender(theme) {
-    if (theme==="dark") {
+    if (theme=="dark") {
         document.getElementById("workshop").style.borderColor = "white"
         document.getElementById("separator3").innerHTML = '<hr size="1" width="auto" color="white">'
         document.getElementById("separator4").innerHTML = '<hr size="1" width="auto" color="white">'
@@ -23,6 +23,8 @@ function t_c_e_extender(theme) {
         document.getElementById("separator11_2_1").innerHTML = '<hr size="1" width="auto" color="white">'
         document.getElementById("separator11_2_2").innerHTML = '<hr size="1" width="auto" color="white">'
         document.getElementById("separator11_2_3").innerHTML = '<hr size="1" width="auto" color="white">'
+        document.getElementById("separator12").innerHTML = '<hr size="1" width="auto" color="white">'
+        document.getElementById("separator12_1").innerHTML = '<hr size="1" width="auto" color="white">'
         document.getElementById("cf1").style.borderColor = "white"
         document.getElementById("cf2").style.borderColor = "white"
         document.getElementById("cf3").style.borderColor = "white"
@@ -30,6 +32,7 @@ function t_c_e_extender(theme) {
         document.getElementById("cf5").style.borderColor = "white"
         document.getElementById("cf6").style.borderColor = "white"
         document.getElementById("cf7").style.borderColor = "white"
+        document.getElementById("cf8").style.borderColor = "white"
         document.getElementById("interpreter").style.color = "white"
         document.getElementById("file_1").style.color = "white"
         document.getElementById("file_2").style.color = "white"
@@ -68,6 +71,8 @@ function t_c_e_extender(theme) {
         document.getElementById("separator11_2_1").innerHTML = '<hr size="1" width="auto" color="black">'
         document.getElementById("separator11_2_2").innerHTML = '<hr size="1" width="auto" color="black">'
         document.getElementById("separator11_2_3").innerHTML = '<hr size="1" width="auto" color="black">'
+        document.getElementById("separator12").innerHTML = '<hr size="1" width="auto" color="black">'
+        document.getElementById("separator12_1").innerHTML = '<hr size="1" width="auto" color="black">'
         document.getElementById("cf1").style.borderColor = "black"
         document.getElementById("cf2").style.borderColor = "black"
         document.getElementById("cf3").style.borderColor = "black"
@@ -75,6 +80,7 @@ function t_c_e_extender(theme) {
         document.getElementById("cf5").style.borderColor = "black"
         document.getElementById("cf6").style.borderColor = "black"
         document.getElementById("cf7").style.borderColor = "black"
+        document.getElementById("cf8").style.borderColor = "black"
         document.getElementById("interpreter").style.color = "black"
         document.getElementById("file_1").style.color = "black"
         document.getElementById("file_2").style.color = "black"
