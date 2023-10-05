@@ -46,6 +46,7 @@ function t_c_e_extender(theme) {
         document.getElementById("file_7_1").style.color = "white"
         document.getElementById("file_7_2").style.color = "white"
         document.getElementById("file_7_3").style.color = "white"
+        document.getElementById("file_8").style.color = "white"
         document.getElementById("contact_mail").style.color = "white"
     } else {
         document.getElementById("workshop").style.borderColor = "black"
@@ -94,6 +95,7 @@ function t_c_e_extender(theme) {
         document.getElementById("file_7_1").style.color = "black"
         document.getElementById("file_7_2").style.color = "black"
         document.getElementById("file_7_3").style.color = "black"
+        document.getElementById("file_8").style.color = "black"
         document.getElementById("contact_mail").style.color = "black"
     }
 }
@@ -277,6 +279,20 @@ function file_color_remover_7_3() {
         document.getElementById("file_7_3").style.color = "white"
     } else {
         document.getElementById("file_7_3").style.color = "black"
+    }
+}
+function file_color_changer_8() {
+    if (theme_mode==="dark") {
+        document.getElementById("file_8").style.color = "red"
+    } else {
+        document.getElementById("file_8").style.color = "blue"
+    }
+}
+function file_color_remover_8() {
+    if (theme_mode==="dark") {
+        document.getElementById("file_8").style.color = "white"
+    } else {
+        document.getElementById("file_8").style.color = "black"
     }
 }
 function mail_color_changer() {
